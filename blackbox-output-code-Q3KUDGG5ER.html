@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Adventure Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>🚀 SIP Adventure Calculator</h1>
+        <p>Embark on your wealth journey! Choose your path: Indian Markets or Crypto Cosmos.</p>
+        <div class="options">
+            <button id="indian-btn" class="btn btn-primary">🌾 Indian Market SIP</button>
+            <button id="crypto-btn" class="btn btn-warning">🪙 Crypto SIP</button>
+        </div>
+    </header>
+    
+    <section id="calculator" class="hidden">
+        <h2 id="calc-title">Your SIP Calculator</h2>
+        <div class="inputs">
+            <label>Monthly Investment: <input type="range" id="amount" min="100" max="100000" value="5000"> ₹<span id="amount-val">5000</span></label>
+            <label>Period (Years): <input type="range" id="period" min="1" max="30" value="10"> <span id="period-val">10</span> years</label>
+            <label>Expected Return (%): <input type="range" id="return" min="1" max="50" value="12"> <span id="return-val">12</span>%</label>
+            <button id="calculate-btn" class="btn btn-success">Calculate & Explore!</button>
+        </div>
+        <div id="results" class="hidden">
+            <canvas id="chart"></canvas>
+            <p id="summary"></p>
+            <div class="fun-fact">💡 Fun Fact: SIPs turn small steps into giant leaps!</div>
+        </div>
+    </section>
+    
+    <section id="extras" class="hidden">
+        <h3>Level Up Your Knowledge!</h3>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="tips">Tips & Tricks</button>
+            <button class="tab-btn" data-tab="compare">Compare Markets</button>
+            <button class="tab-btn" data-tab="goals">Goal Tracker</button>
+        </div>
+        <div id="tips" class="tab-content">
+            <p>Start early! Even ₹100/month can grow massively.</p>
+            <button id="quiz-btn" class="btn btn-info">Take Quiz for Points!</button>
+        </div>
+        <div id="compare" class="tab-content hidden">
+            <p>Indian SIP: Stable growth. Crypto: High risk, high reward.</p>
+        </div>
+        <div id="goals" class="tab-content hidden">
+            <input type="number" id="goal-amount" placeholder="Target Amount (₹)">
+            <button id="track-btn" class="btn btn-secondary">Track Goal</button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Share your results! <button id="share-btn" class="btn btn-light">Share</button></p>
+        <p>Points Earned: <span id="points">0</span> | Explore more to unlock secrets!</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
